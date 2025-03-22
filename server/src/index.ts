@@ -1,6 +1,11 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
 import gridRouter from "./routes/gridRouter";
+import connectDb from "./config/dbConfig";
+
+dotenv.config();
+connectDb();
 
 const port = process.env.PORT || 3000;
 
